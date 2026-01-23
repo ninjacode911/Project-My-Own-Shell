@@ -1,2 +1,15 @@
-# Project-My-Own-Shell
+# Project-My-Own-Shell 
 I Built My Very Own Shell 😊
+![03333dfa4291958aaf17](https://github.com/user-attachments/assets/ed1b7e1f-630f-4fa2-af35-8269799dcb7d)
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 50C20 33.4315 33.4315 20 50 20H190C206.569 20 220 33.4315 220 50V190C220 206.569 206.569 220 190 220H50C33.4315 220 20 206.569 20 190V50Z" fill="url(#paint0_linear_4585_7821)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 0C22.3858 0 0 22.3858 0 50V170C0 197.614 22.3858 220 50 220C33.4315 220 20 206.569 20 190V50C20 33.4315 33.4315 20 50 20H190C206.569 20 220 33.4315 220 50C220 22.3858 197.614 0 170 0H50Z" fill="white"/>
+<path d="M120 163H188V183H120V163Z" fill="#62B330"/>
+<path d="M52 57L120 86.25V105.75L52 135V111.9L94.3111 96L52 80.1V57Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_4585_7821" x1="10" y1="0" x2="10" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2A3036"/>
+<stop offset="1" stop-color="#181D22"/>
+</linearGradient>
+</defs>
+</svg>
