@@ -1,4 +1,4 @@
-# Project-My-Own-Shell 
+# Project-My-Own-Shell 🖥️
 I Built My Very Own Shell 😊
 ![03333dfa4291958aaf17](https://github.com/user-attachments/assets/ed1b7e1f-630f-4fa2-af35-8269799dcb7d)
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
