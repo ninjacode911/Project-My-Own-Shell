@@ -1,15 +1,132 @@
-# Project-My-Own-Shell 🖥️
-I Built My Very Own Shell 😊
-![03333dfa4291958aaf17](https://github.com/user-attachments/assets/ed1b7e1f-630f-4fa2-af35-8269799dcb7d)
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 50C20 33.4315 33.4315 20 50 20H190C206.569 20 220 33.4315 220 50V190C220 206.569 206.569 220 190 220H50C33.4315 220 20 206.569 20 190V50Z" fill="url(#paint0_linear_4585_7821)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M50 0C22.3858 0 0 22.3858 0 50V170C0 197.614 22.3858 220 50 220C33.4315 220 20 206.569 20 190V50C20 33.4315 33.4315 20 50 20H190C206.569 20 220 33.4315 220 50C220 22.3858 197.614 0 170 0H50Z" fill="white"/>
-<path d="M120 163H188V183H120V163Z" fill="#62B330"/>
-<path d="M52 57L120 86.25V105.75L52 135V111.9L94.3111 96L52 80.1V57Z" fill="white"/>
-<defs>
-<linearGradient id="paint0_linear_4585_7821" x1="10" y1="0" x2="10" y2="20" gradientUnits="userSpaceOnUse">
-<stop stop-color="#2A3036"/>
-<stop offset="1" stop-color="#181D22"/>
-</linearGradient>
-</defs>
-</svg>
+# 🐚 Build Your Own Shell — Python
+
+A fully functional Unix shell built from scratch in Python as part of the [CodeCrafters](https://codecrafters.io/) "Build Your Own Shell" challenge. Zero external dependencies — only the Python standard library.
+
+![Shell Demo](Screenshot.png)
+
+---
+
+## ✨ Features
+
+### Core Shell
+- **REPL** — Interactive Read-Eval-Print Loop with `$ ` prompt
+- **Command Parsing** — Handles single quotes, double quotes, and backslash escapes
+- **External Programs** — Locates and runs executables via `PATH` resolution
+
+### Builtins
+| Command | Description |
+|---|---|
+| `echo <args>` | Print arguments to stdout |
+| `type <cmd>` | Identify if a command is a builtin or external program |
+| `pwd` | Print the current working directory |
+| `cd <path>` | Change directory (supports absolute, relative, and `~`) |
+| `exit` | Exit the shell |
+| `history` | Display command history with indices |
+
+### I/O Redirection
+| Operator | Description |
+|---|---|
+| `>` / `1>` | Redirect stdout (overwrite) |
+| `>>` / `1>>` | Redirect stdout (append) |
+| `2>` | Redirect stderr (overwrite) |
+| `2>>` | Redirect stderr (append) |
+
+### Pipelines
+- Two-command pipelines: `cat file \| wc`
+- N-stage pipelines: `ls -la \| tail -n 5 \| head -n 3 \| grep "file"`
+- Builtins in pipelines: `echo hello \| wc`
+
+### Tab Completion
+- Single match auto-complete with trailing space
+- Longest common prefix completion for multiple matches
+- Display all matches on double-Tab
+
+### Command History
+- `history` / `history <n>` — Display all or last N commands
+- **Arrow key navigation** — Up/Down arrow to recall previous commands
+- `history -r <file>` — Read history from a file
+- `history -w <file>` — Write history to a file
+- `history -a <file>` — Append new commands to a file
+- **HISTFILE** — Automatic load on startup and save on exit
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.11+
+
+### Run
+
+```bash
+# Clone the repository
+git clone https://github.com/ninjacode911/codecrafters-shell-python.git
+cd codecrafters-shell-python
+
+# Run the shell
+python app/main.py
+```
+
+### Example Session
+
+```
+$ echo hello world
+hello world
+$ type echo
+echo is a shell builtin
+$ pwd
+/home/user
+$ cd /tmp
+$ ls -la | head -n 3
+total 48
+drwxrwxrwt 12 root root 4096 Feb 22 22:00 .
+drwxr-xr-x 20 root root 4096 Feb 22 10:00 ..
+$ history 3
+    4  ls -la | head -n 3
+    5  history 3
+$ exit
+```
+
+---
+
+## 🏗️ Architecture
+
+```
+app/
+└── main.py          # Single-file shell implementation (285 lines)
+```
+
+| Function | Purpose |
+|---|---|
+| `parse_command()` | Tokenizes input respecting quotes and escapes |
+| `get_executable_path()` | Searches PATH for executables |
+| `run_builtin()` | Dispatches all builtin commands |
+| `main()` | REPL loop, readline setup, pipelines, redirection |
+
+---
+
+## 📚 What I Learned
+
+- How shells work under the hood — REPL loops, command parsing, and process management
+- Unix process model — `fork`, `exec`, pipes, and file descriptors via Python's `subprocess`
+- Terminal I/O — `readline` library for tab completion, history navigation, and line editing
+- State machine parsing — handling nested quotes, escape characters, and special tokens
+- Inter-process communication — connecting processes via `os.pipe()` and `subprocess.PIPE`
+- File descriptor management — redirection of `stdout` and `stderr` to files
+
+---
+
+## 🏆 Challenge Progress
+
+All **36 stages** completed, including:
+- ✅ Basic REPL & builtins
+- ✅ PATH resolution & external programs
+- ✅ Quoting & escape sequences
+- ✅ I/O redirection (stdout & stderr)
+- ✅ Tab completion (single, multiple, display)
+- ✅ N-stage pipelines with builtin support
+- ✅ Full command history with file persistence
+
+---
+
+Built with ❤️ as part of the [CodeCrafters](https://codecrafters.io/) Shell Challenge.
