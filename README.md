@@ -1,17 +1,12 @@
-<div align="left">
-  <img width="100%" alt="FlowSync Banner" src="https://github.com/ninjacode911/Github/raw/main/NAVNIT%20background.png" />
-</div>
+# 🐚 Build Your Own Shell — Python
 
-
-#  Build Your Own Shell — Python
-
-A fully functional Unix shell built from scratch in Python as part of the "Build Your Own Shell" challenge. Zero external dependencies — only the Python standard library.
+A fully functional Unix shell built from scratch in Python as part of the [CodeCrafters](https://codecrafters.io/) "Build Your Own Shell" challenge. Zero external dependencies — only the Python standard library.
 
 ![Shell Demo](Screenshot.png)
 
 ---
 
-##  Features
+## ✨ Features
 
 ### Core Shell
 - **REPL** — Interactive Read-Eval-Print Loop with `$ ` prompt
@@ -56,7 +51,7 @@ A fully functional Unix shell built from scratch in Python as part of the "Build
 
 ---
 
-##  Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.11+
@@ -94,7 +89,7 @@ $ exit
 
 ---
 
-##  Architecture
+## 🏗️ Architecture
 
 ```
 app/
@@ -110,7 +105,7 @@ app/
 
 ---
 
-##  What I Learned
+## 📚 What I Learned
 
 - How shells work under the hood — REPL loops, command parsing, and process management
 - Unix process model — `fork`, `exec`, pipes, and file descriptors via Python's `subprocess`
@@ -121,7 +116,7 @@ app/
 
 ---
 
-##  Challenge Progress
+## 🏆 Challenge Progress
 
 All **36 stages** completed, including:
 - ✅ Basic REPL & builtins
@@ -132,4 +127,6 @@ All **36 stages** completed, including:
 - ✅ N-stage pipelines with builtin support
 - ✅ Full command history with file persistence
 
+---
 
+Built with ❤️ as part of the [CodeCrafters](https://codecrafters.io/) Shell Challenge.
